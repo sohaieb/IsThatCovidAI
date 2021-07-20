@@ -1,6 +1,9 @@
-import 'jquery/dist/jquery.min';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.scss';
+import './app/controllers/index';
+import DOMhelper from "./app/_helpers/DOMhelper";
+import {RouterMiddleware} from "./app/_middleware/RouterMiddleware";
 
-console.log('Type script executed!');
+//  DOMhelper.render('home');
+RouterMiddleware.checkRoute();

@@ -2,9 +2,10 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "CommonJS",
     "target": "es5",
     "allowJs": true
   },
+  "include": ["html.d.ts"],
   "files": ["src/main.ts"]
 }
