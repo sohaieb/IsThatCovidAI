@@ -23,7 +23,8 @@ const config = {
     devServer: {
         open: false,
         host: 'localhost',
-        port: 8480
+        port: 8480,
+        historyApiFallback: true
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -59,7 +60,11 @@ const config = {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
                 type: 'asset',
             },
-
+            {
+                test: /\.html$/i,
+                exclude: /node_modules|index.html/,
+                use: {loader: 'html-loader'}
+            }
             // Add your rules for custom modules here
             // Learn more about loaders from https://webpack.js.org/loaders/
         ],
