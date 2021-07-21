@@ -14,7 +14,6 @@ export default class DOMhelper {
         result.then(html => {
             let wrapper = document.createElement('div');
             wrapper.innerHTML = html;
-            console.log(elementID);
             let tempDOM = wrapper.querySelector(`#${elementID}`);
             let page = (document.importNode((tempDOM as any).content, true) as any);
             let container = document.body.querySelector('.container');

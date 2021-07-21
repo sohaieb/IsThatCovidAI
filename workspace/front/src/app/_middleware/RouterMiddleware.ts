@@ -15,7 +15,7 @@ export class RouterMiddleware {
      */
     static getInstance() {
         if(!this.singleton){
-            return new RouterMiddleware();
+            this.singleton = new RouterMiddleware();
         }
         return this.singleton;
     }
