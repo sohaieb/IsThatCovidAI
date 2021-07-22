@@ -1,3 +1,300 @@
 <template id="home">
-  <h1>Home</h1>
+    <form class="mb-5" action="/" method="post">
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="h1">Is That Covid?</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <label>Answer questions correctly you will get the result of your COVID status:</label>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="h3">Most common symptoms</div>
+            </div>
+        </div>
+        <fieldset class="form-group">
+            <!--ROW-->
+            <div class="row">
+
+                <!--COL -->
+                <legend class="col-form-label col-sm-6 pt-0 mt-2">Do you have fever:</legend>
+                <legend class="col-form-label col-sm-6 pt-0 mt-2">Do you have dry cough:</legend>
+                <div class="col-sm-6">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="fever" value="yes" checked>
+                        <label class="form-check-label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="fever" value="no">
+                        <label class="form-check-label">
+                            no
+                        </label>
+                    </div>
+                </div>
+
+                <!--COL -->
+                <div class="col-sm-6">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="cough" value="yes" checked>
+                        <label class="form-check-label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="cough" value="no">
+                        <label class="form-check-label">
+                            no
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!--ROW-->
+            <div class="row">
+
+                <!--COL -->
+                <legend class="col-form-label col-sm-12 pt-0 mt-2">Do you have tiredness:</legend>
+                <div class="col-sm-6">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tiredness" value="yes" checked>
+                        <label class="form-check-label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="tiredness" value="no">
+                        <label class="form-check-label">
+                            no
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="h3">Less common symptoms</div>
+            </div>
+        </div>
+        <fieldset class="form-group">
+            <!--ROW-->
+            <div class="row mt-2">
+
+                <!--COL -->
+                <legend class="col-form-label col-sm-6 pt-0 mt-2">Do you have Aches and pains:</legend>
+                <legend class="col-form-label col-sm-6 pt-0 mt-2">Do you have Sore throat:</legend>
+                <div class="col-sm-6">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="aches_and_pains" value="yes" checked
+                        >
+                        <label class="form-check-label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="aches_and_pains" value="no">
+                        <label class="form-check-label">
+                            no
+                        </label>
+                    </div>
+                </div>
+
+                <!--COL -->
+                <div class="col-sm-6">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sore_throat" value="yes" checked
+                        >
+                        <label class="form-check-label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sore_throat" value="no">
+                        <label class="form-check-label">
+                            no
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!--ROW-->
+            <div class="row mt-2">
+
+                <!--COL -->
+                <legend class="col-form-label col-sm-6 pt-0 mt-2">Do you have diarrhoea:</legend>
+                <legend class="col-form-label col-sm-6 pt-0 mt-2">Do you have conjunctivitis:</legend>
+                <div class="col-sm-6">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="diarrhoea" value="yes" checked
+                        >
+                        <label class="form-check-label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="diarrhoea" value="no">
+                        <label class="form-check-label">
+                            no
+                        </label>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="conjunctivitis" value="yes" checked
+                        >
+                        <label class="form-check-label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="conjunctivitis" value="no">
+                        <label class="form-check-label">
+                            no
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!--ROW-->
+            <div class="row mt-2">
+
+                <!--COL -->
+                <legend class="col-form-label col-sm-6 pt-0 mt-2">Do you have headache:</legend>
+                <legend class="col-form-label col-sm-6 pt-0 mt-2">Do you have loss of taste or smell:</legend>
+                <div class="col-sm-6">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="headache" value="yes" checked
+                        >
+                        <label class="form-check-label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="headache" value="no">
+                        <label class="form-check-label">
+                            no
+                        </label>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="loss_taste_smell" value="yes" checked
+                        >
+                        <label class="form-check-label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="loss_taste_smell" value="no">
+                        <label class="form-check-label">
+                            no
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!--ROW-->
+            <div class="row mt-2">
+
+                <!--COL -->
+                <legend class="col-form-label col-sm-12 pt-0 mt-2">Do you have a rash on skin, or discolouration of
+                    fingers or toes:
+                </legend>
+                <div class="col-sm-6">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="rash_skin_discolouration_fingers_toes"
+                               value="yes" checked
+                        >
+                        <label class="form-check-label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="rash_skin_discolouration_fingers_toes"
+                               value="no">
+                        <label class="form-check-label">
+                            no
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="h3">Serious symptoms</div>
+            </div>
+        </div>
+        <fieldset class="form-group">
+            <!--ROW-->
+            <div class="row mt-2">
+
+                <!--COL -->
+                <legend class="col-form-label col-sm-6 pt-0 mt-2">Do you have difficulty breathing or shortness of
+                    breath:
+                </legend>
+                <legend class="col-form-label col-sm-6 pt-0 mt-2">Do you have chest pain or pressure:</legend>
+                <div class="col-sm-6">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="difficulty_breathing" value="yes" checked
+                        >
+                        <label class="form-check-label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="difficulty_breathing" value="no">
+                        <label class="form-check-label">
+                            no
+                        </label>
+                    </div>
+                </div>
+
+                <!--COL -->
+                <div class="col-sm-6">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="chest_pain" value="yes" checked
+                        >
+                        <label class="form-check-label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="chest_pain" value="no">
+                        <label class="form-check-label">
+                            no
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!--ROW-->
+            <div class="row mt-2">
+
+                <!--COL -->
+                <legend class="col-form-label col-sm-12 pt-0 mt-2">Do you have loss of speech or movement:</legend>
+                <div class="col-sm-6">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="loss_speech_movement" value="yes" checked
+                        >
+                        <label class="form-check-label">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="loss_speech_movement" value="no">
+                        <label class="form-check-label">
+                            no
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <button class="btn btn-info" type="submit">Check my Covid status</button>
+    </form>
 </template>

@@ -14,3 +14,10 @@ export type ButtonCallback = (e: Event) => void;
 export type RoutingConfig = {
     [route: string] : Route
 };
+
+
+/**
+ * Global Http Request Body Types
+ */
+export type GeneralObject = {[prop:string]: string};
+export type HttpRequestBody = object|FormData|string|GeneralObject;
