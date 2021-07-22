@@ -5,6 +5,9 @@ import {getActionsFor} from "../_config/Globals";
 let router: RouterMiddleware;
 router = RouterMiddleware.getInstance();
 
+/**
+ * The Application container class to bootstrap the hole logic of the app.
+ */
 export default class App {
     private static singleton: App;
         private constructor() {}

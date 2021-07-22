@@ -19,9 +19,23 @@ export default class DOMhelper {
             let container = document.body.querySelector('.container');
             container.innerHTML = '';
             container.appendChild(page);
+            this.loadController(pageName);
         })
             .catch(error => console.log('Check your routing name or filename.'));
 
+    }
+
+    /**
+     * Load controller logic and init params
+     *
+     * @param pageName
+     * @private
+     */
+    private static loadController(pageName: string) {
+        import(`../../app/controllers/${pageName}`)
+            .then(data => data.default.init())
+            .catch(error => console.log('Controllers should implements "Controller" interface'))
+        ;
     }
 
     /**

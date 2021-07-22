@@ -2,22 +2,22 @@ import {ROUTER} from "../routes/Routing";
 import DOMhelper from "../_helpers/DOMhelper";
 import {Route} from "../_types/GlobalTypes";
 
+let singleton:RouterMiddleware;
+
 /**
  * Router middle where is responsible for routing system
  */
 export class RouterMiddleware {
-    static singleton: RouterMiddleware;
-
     private constructor() {}
 
     /**
      * Get router middle where singleton instance
      */
     static getInstance() {
-        if(!this.singleton){
-            this.singleton = new RouterMiddleware();
+        if(!singleton){
+            singleton = new RouterMiddleware();
         }
-        return this.singleton;
+        return singleton;
     }
 
     /**

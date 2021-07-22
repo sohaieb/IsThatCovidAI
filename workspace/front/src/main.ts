@@ -12,8 +12,8 @@ import App from './app/_helpers/App';
  * */
 
 /** Lazy loading modules **/
-window.onload = (ev) => {
-    import('./app/controllers/index').then();
-};
+/*window.onload = (ev) => {
+
+};*/
 App.getInstance().init();
 
