@@ -1,23 +1,38 @@
-import * as $ from 'jquery';
 import HttpClient from "../_helpers/HttpClient";
 import {Controller} from "../_interfaces/Controller";
 import {ENV_CONFIG} from "../_config/Globals";
 import {HttpRequestBody} from "../_types/GlobalTypes";
-
+import SpinnerHelper from "../_helpers/SpinnerHelper";
+import AlertHelper from "../_helpers/AlertHelper";
 let singleton: Home;
+
 
 class Home implements Controller {
     init(): void {
         let form = document.forms[0];
-        let fd = new FormData(form);
         form.addEventListener('submit', (e) => {
             e.preventDefault();
+            let fd = new FormData(form);
+            //form.
+            SpinnerHelper.show();
             this.runHttpRequest(fd,
                 data => {
-                    console.log(data); // on success display alert
+                    SpinnerHelper.hide();
+                    if(data.status / 100 !== 2) {
+                        AlertHelper.error({
+                            title: 'Error',
+                            text: data.statusText
+                        });
+                        return;
+                    }
+                    AlertHelper.success({
+                        title: 'Error',
+                        text: data.statusText
+                    });
                 },
                 error => {
-                    console.log(error);
+                console.log('err');
+                    SpinnerHelper.hide();
                 }
             );
         });
