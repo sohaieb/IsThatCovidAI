@@ -1,12 +1,13 @@
+import {GeneralObject, HttpRequestBody} from "../_types/GlobalTypes";
+
 let singleton: HttpClient;
-type GeneralObject = {[prop:string]: string};
 export default class HttpClient {
     private url: any;
     private readonly headers: any;
-    private body: object|FormData|string|GeneralObject;
+    private body: HttpRequestBody;
     private readonly method: string;
 
-    private constructor({url, body, headers, method}: {url?:string, body?:object, headers?: object, method?:string}) {
+    private constructor({url, body, headers, method}: {url?:string, body?:HttpRequestBody, headers?: object, method?:string}) {
         this.url = url;
         this.headers = headers;
         this.body = body;
@@ -21,7 +22,7 @@ export default class HttpClient {
      * @param headers
      * @param method
      */
-    static getInstance({url, body, headers, method}: {url?:string, body?:object, headers?: object, method?:string}) {
+    static getInstance({url, body, headers, method}: {url?:string, body?:HttpRequestBody, headers?: object, method?:string}) {
         if(!singleton){
             singleton = new HttpClient({url, body, headers, method});
         }
@@ -44,8 +45,13 @@ export default class HttpClient {
             config.headers = this.headers;
         }
         return fetch(this.url,config)
-            .then(response => response.json())
-            .catch(error => error);
+            .then(response => {
+                if(response.status / 100 === 2){
+                    return response.json();
+                }
+                throw new Error(response.statusText);
+            })
+            .catch((error:Error) => error.message);
     }
 
     /**

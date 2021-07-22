@@ -26,3 +26,7 @@ export function getActionsFor(router: RouterMiddleware){
         }
     ]
 }
+
+export const ENV_CONFIG = {
+    apiURL: 'http://localhost:8480'
+};
