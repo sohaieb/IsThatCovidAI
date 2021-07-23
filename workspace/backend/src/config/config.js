@@ -1,10 +1,11 @@
 /**
- * Global app configuratio
+ * Global app configuration
  *
  * @type {{port: number}}
  */
 module.exports = {
     port: 3000,
     mongoDbUrl: 'mongodb://localhost:27017',
-    dbName: 'IsThatCovidAI'
+    dbName: 'IsThatCovidAI',
+    CasesFile: '_artifacts/cases.json'
 };
