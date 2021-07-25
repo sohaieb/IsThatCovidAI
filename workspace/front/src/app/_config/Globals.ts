@@ -1,6 +1,15 @@
 import {RouterMiddleware} from "../_middleware/RouterMiddleware";
 import DOMhelper from "../_helpers/DOMhelper";
 
+
+/**
+ * Global Application Environment configuration
+ */
+export const ENV_CONFIG = {
+    apiURL: ' http://localhost:3000'
+};
+
+
 /**
  * Get Global Functions
  *
@@ -26,7 +35,3 @@ export function getActionsFor(router: RouterMiddleware){
         }
     ]
 }
-
-export const ENV_CONFIG = {
-    apiURL: 'http://localhost:8480'
-};

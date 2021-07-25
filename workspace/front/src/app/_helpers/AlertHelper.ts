@@ -8,14 +8,29 @@ type SwalConfig = {title: string, text: string};
 class AlertHelper {
 
     /**
-     * Show loading spinner
+     * Show success alert
      */
     success({title,text}:SwalConfig){
         this.displaySwal({title,text, icon: 'success'});
     }
 
+
     /**
-     * Hide loading spinner
+     * Show information alert
+     */
+    information({title,text}:SwalConfig){
+        this.displaySwal({title,text, icon: 'info'});
+    }
+
+    /**
+     * Show information alert
+     */
+    warning({title,text}:SwalConfig){
+        this.displaySwal({title,text, icon: 'warning'});
+    }
+
+    /**
+     * Show error alert
      */
     error({title,text}: SwalConfig){
         this.displaySwal({title,text, icon: 'error'});

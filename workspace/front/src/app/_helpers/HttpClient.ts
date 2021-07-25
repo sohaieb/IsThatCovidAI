@@ -61,7 +61,7 @@ export default class HttpClient {
         return fetch(this.url,config)
             .then(response => {
                 if(response.status / 100 === 2){
-                    return response.json();
+                    return response;
                 }
                 throw response;
             })
