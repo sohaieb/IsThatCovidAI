@@ -13,7 +13,7 @@ export class RouterMiddleware {
     /**
      * Get router middle where singleton instance
      */
-    static getInstance() {
+    static getInstance(): RouterMiddleware {
         if(!singleton){
             singleton = new RouterMiddleware();
         }

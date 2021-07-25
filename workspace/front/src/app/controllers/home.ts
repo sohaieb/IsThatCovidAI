@@ -4,6 +4,7 @@ import {ENV_CONFIG} from "../_config/Globals";
 import {HttpRequestBody} from "../_types/GlobalTypes";
 import SpinnerHelper from "../_helpers/SpinnerHelper";
 import AlertHelper from "../_helpers/AlertHelper";
+
 let singleton: Home;
 
 
@@ -18,20 +19,39 @@ class Home implements Controller {
             this.runHttpRequest(fd,
                 data => {
                     SpinnerHelper.hide();
-                    if(data.status / 100 !== 2) {
+                    if (data.status / 100 !== 2) {
                         AlertHelper.error({
                             title: 'Error',
                             text: data.statusText
                         });
                         return;
                     }
-                    AlertHelper.success({
-                        title: 'Error',
-                        text: data.statusText
-                    });
+                    data.json()
+                        .then(
+                            (data: any) => {
+                                let alertOptions: {method: string, title: string, text: string};
+                                if (data.result.covid) {
+                                    alertOptions = {
+                                        method: 'warning',
+                                        title: 'Positive',
+                                        text: 'Unfortunately You have COVID!'
+                                    }
+                                } else {
+                                    alertOptions = {
+                                        method: 'success',
+                                        title: 'Negative',
+                                        text: `Fortunately You don't have COVID! please take care!`
+                                    }
+                                }
+                                Object.getPrototypeOf(AlertHelper)[alertOptions.method]({
+                                    title: alertOptions.title,
+                                    text: alertOptions.text
+                                });
+                            }
+                        );
                 },
                 error => {
-                console.log('err');
+                    console.log('err');
                     SpinnerHelper.hide();
                 }
             );

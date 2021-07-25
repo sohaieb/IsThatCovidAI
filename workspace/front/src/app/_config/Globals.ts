@@ -6,7 +6,7 @@ import DOMhelper from "../_helpers/DOMhelper";
  * Global Application Environment configuration
  */
 export const ENV_CONFIG = {
-    apiURL: 'http://localhost:8480'
+    apiURL: ' http://localhost:3000'
 };
 
 
