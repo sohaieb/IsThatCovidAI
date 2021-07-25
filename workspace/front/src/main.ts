@@ -1,6 +1,19 @@
-import 'jquery/dist/jquery.min';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+/**
+ * Imports
+ * */
+import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.scss';
+import App from './app/_helpers/App';
 
-console.log('Type script executed!');
+
+/**
+ * Application Bootstrap
+ * */
+
+/** Lazy loading modules **/
+/*window.onload = (ev) => {
+
+};*/
+App.getInstance().init();
+
