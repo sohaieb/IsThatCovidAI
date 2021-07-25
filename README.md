@@ -1,4 +1,4 @@
-# IsThatCovidIA
+# IsThatCovidAI
 
 This is a simple demo application to detect your COVID-19 case by inputs you provide to the application itself.<br />
 For demo purposes, we use the provided **fake_dataset.json** file. 
