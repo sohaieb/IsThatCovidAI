@@ -1,6 +1,6 @@
-# IsThatCovidAI
+# Welcome to IsThatCovidAI 👋
 
-This is a simple demo application to detect your COVID-19 case by inputs you provide to the application itself.<br />
+> This is a simple demo application to detect your COVID-19 case by inputs you provide to the application itself.<br />
 For demo purposes, we use the provided **fake_dataset.json** file. 
 So, to be able to use it truly, you have to provide your own a **true dataset.json** file respecting the same format as provided in `workspace/backend/src/_artifacts/fake_dataset.json`. 
 
@@ -47,10 +47,16 @@ npm start
 ![About Us Page](screenshots/3.PNG?raw=true "Title")
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Pull requests are welcome. For major changes, please open an [issue](https://github.com/sohaieb/IsThatCovidAI/pulls) first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
-## Author
+## Show your support
 
-[Sohaieb Azaiez](https://www.linkedin.com/in/azsoh/)
+Give a ⭐️ if this project helped you!
+
+## Author
+👤 **Sohaieb Azaiez**
+
+* LinkedIn: https://www.linkedin.com/in/azsoh/
+* Github: [@sohaieb](https://github.com/sohaieb)
